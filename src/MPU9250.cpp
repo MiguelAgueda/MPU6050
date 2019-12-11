@@ -145,8 +145,16 @@ void MPU9250::accelWakeOnMotion()
 
 void MPU9250::reset()
 {
+    if (!_passthru) {
+    	writeMPURegister(USER_CTRL, 0); // disable internal I2C bus
+    }
+
     // reset device
     writeMPURegister(PWR_MGMT_1, 0x80); // Set bit 7 to reset MPU9250
+
+    if (!_passthru) {
+    	writeMPURegister(USER_CTRL, I2C_MST_EN); // re-enable internal I2C bus
+    }
     delay(100); // Wait for all registers to reset 
 }
 
