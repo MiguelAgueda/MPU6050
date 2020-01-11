@@ -29,7 +29,7 @@
 #include <Arduino.h>
 
 #elif defined(__arm__) 
-#if defined(STM32F303)  || defined(STM32F405xx)
+#if defined(STM32F303)  || defined(STM32F405xx)  || defined(STM32H7xx)
 extern "C" { void delay(uint32_t msec); }
 #else
 #include <wiringPi.h>
