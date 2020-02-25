@@ -24,8 +24,8 @@
 
 #include <CrossPlatformI2C.h>
 
-MPU9250_Passthru::MPU9250_Passthru(Ascale_t ascale, Gscale_t gscale, Mscale_t mscale, Mmode_t mmode, uint8_t sampleRateDivisor) :
-    MPU9250(ascale, gscale, mscale, mmode, sampleRateDivisor, true)
+MPU9250_Passthru::MPU9250_Passthru(Ascale_t ascale, Gscale_t gscale, Mscale_t mscale, Mmode_t mmode, uint8_t sampleRateDivisor) 
+    : MPU9250(ascale, gscale, mscale, mmode, sampleRateDivisor, true)
 {
 }
 

@@ -22,8 +22,8 @@
 
 #include "CrossPlatformSPI.h"
 
-MPU6x00::MPU6x00(Ascale_t ascale, Gscale_t gscale, uint8_t sampleRateDivisor) : 
-    MPU6xx0(ascale, gscale, sampleRateDivisor)
+MPU6x00::MPU6x00(Ascale_t ascale, Gscale_t gscale, uint8_t sampleRateDivisor) 
+    : MPU6xx0(ascale, gscale, sampleRateDivisor)
 {
 }
 

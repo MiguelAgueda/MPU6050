@@ -22,8 +22,8 @@
 
 #include "CrossPlatformI2C_Core.h"
 
-MPU6050::MPU6050(Ascale_t ascale, Gscale_t gscale, uint8_t sampleRateDivisor) : 
-    MPU6xx0(ascale, gscale, sampleRateDivisor)
+MPU6050::MPU6050(Ascale_t ascale, Gscale_t gscale, uint8_t sampleRateDivisor) 
+    : MPU6xx0(ascale, gscale, sampleRateDivisor)
 {
 }
 

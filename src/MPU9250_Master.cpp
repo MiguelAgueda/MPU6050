@@ -22,8 +22,8 @@
 
 #include "MPU9250_Master.h"
 
-MPU9250_Master::MPU9250_Master(Ascale_t ascale, Gscale_t gscale, Mscale_t mscale, Mmode_t mmode, uint8_t sampleRateDivisor) :
-    MPU9250(ascale, gscale, mscale, mmode, sampleRateDivisor, false)
+MPU9250_Master::MPU9250_Master(Ascale_t ascale, Gscale_t gscale, Mscale_t mscale, Mmode_t mmode, uint8_t sampleRateDivisor) 
+    : MPU9250(ascale, gscale, mscale, mmode, sampleRateDivisor, false)
 {
 }
 
