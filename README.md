@@ -11,6 +11,7 @@ into the modern Arduino library [format](https://github.com/arduino/arduino/wiki
 * Simplified the 
 [examples](https://github.com/kriswiner/MPU9250/blob/master/MPU9250_BME280_SPIFlash_Ladybug/MPU9250_BME280_SPIFlash_Ladybug.ino) 
 by removing code requiring components other than the MPU sensors
+* Added support for STM32H7 (courtesy of [Hish15](https://github.com/hish15))
 
 The following sensors are currently supported:
 
