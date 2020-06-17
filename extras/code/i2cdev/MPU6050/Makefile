@@ -18,6 +18,7 @@
   
 # Change this to whereever you installed CrossPlatformDataBus
 CPDB = $(HOME)/CrossPlatformDataBus
+#CPDB = $(HOME)/Documents/Arduino/libraries/CrossPlatformDataBus
 
 ALL = Basic
 
@@ -30,7 +31,7 @@ CPCMN =  $(CPDB)/extras/common
 all: $(ALL)
 
 Basic: Basic.o MPU.o MPU6xx0.o MPU6050.o I2CDevI2C.o main.o timing.o
-	g++ -std=c++11 -o Basic Basic.o MPU.o MPU6xx0.o MPU6050.o I2CDevI2C.o main.o timing.o
+	g++ -std=c++11 -o Basic Basic.o MPU.o MPU6xx0.o MPU6050.o I2CDevI2C.o main.o timing.o -li2c
 
 Basic.o: Basic.cpp 
 	g++ -std=c++11 -Wall -I$(MPUSRC) -c Basic.cpp

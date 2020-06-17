@@ -18,6 +18,7 @@
   
 # Change this to whereever you installed CrossPlatformDataBus
 CPDB = $(HOME)/CrossPlatformDataBus
+#CPDB = $(HOME)/Documents/Arduino/libraries/CrossPlatformDataBus
 
 ALL = MasterTest PassthruTest
 
@@ -30,13 +31,13 @@ CPCMN =  $(CPDB)/extras/common
 all: $(ALL)
 
 MasterTest: MasterTest.o MPU.o MPU9250.o MPU9250_Master.o MPU9250_Master_I2C.o I2CDevI2C.o main.o timing.o errmsg.o
-	g++ -std=c++11 -o MasterTest MasterTest.o MPU.o MPU9250.o MPU9250_Master.o MPU9250_Master_I2C.o I2CDevI2C.o main.o timing.o errmsg.o
+	g++ -std=c++11 -o MasterTest MasterTest.o MPU.o MPU9250.o MPU9250_Master.o MPU9250_Master_I2C.o I2CDevI2C.o main.o timing.o errmsg.o -li2c
 
 MasterTest.o: MasterTest.cpp 
 	g++ -std=c++11 -Wall -I$(CPCMN) -I$(MPUSRC) -c MasterTest.cpp
 
 PassthruTest: PassthruTest.o MPU.o MPU9250.o MPU9250_Passthru.o I2CDevI2C.o main.o timing.o errmsg.o
-	g++ -std=c++11 -o PassthruTest PassthruTest.o MPU.o MPU9250.o MPU9250_Passthru.o I2CDevI2C.o main.o timing.o errmsg.o
+	g++ -std=c++11 -o PassthruTest PassthruTest.o MPU.o MPU9250.o MPU9250_Passthru.o I2CDevI2C.o main.o timing.o errmsg.o -li2c
 
 PassthruTest.o: PassthruTest.cpp 
 	g++ -std=c++11 -Wall -I$(CPCMN) -I$(MPUSRC) -c PassthruTest.cpp
