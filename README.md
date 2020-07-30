@@ -40,7 +40,7 @@ development board, I<sup>2</sup>C
 
 * Raspberry Pi Zero with [PXFMini](http://erlerobotics.com/blog/product/pxfmini/) autopilot shield, SPI 
 
-* NVIDIA Jetson TX1, I<sup>2</sup>C
+* NVIDIA Jetson TX1 and Nano, I<sup>2</sup>C
 
 * Omnibus F3 flight controller (MPU6000)
 
